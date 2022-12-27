@@ -33,12 +33,15 @@ struct TeamSearchCell: View {
             Spacer()
             
             Button {
-                // add to favorites
-                coreDataViewModel.addTeam(text: team)
-                favorite.toggle()
+                // add or remove team as favorite
+                if(coreDataViewModel.teamIsFavorite(team: team)) {
+                    coreDataViewModel.deleteTeam(team: team)
+                } else {
+                    coreDataViewModel.addTeam(text: team)
+                }
                 
             } label: {
-                Image(systemName: favorite ? "heart.fill" : "heart")
+                Image(systemName: coreDataViewModel.teamIsFavorite(team: team) ? "heart.fill" : "heart")
                     .foregroundColor(Color.theme.orange)
                     .font(.system(size: 26))
             }

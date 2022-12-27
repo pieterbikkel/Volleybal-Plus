@@ -18,7 +18,7 @@ struct SettingsView: View {
             Button("Favoriete teams") {
                 showFavoriteTeams = true
             }
-            .buttonStyle(GradientButtonStyle(scaledAmount: 0.95))
+            .buttonStyle(GradientButtonStyle())
             .popover(isPresented: $showFavoriteTeams) {
                 FavoriteTeamsView()
             }
@@ -26,7 +26,7 @@ struct SettingsView: View {
             Button("Team toevoegen") {
                 showSearchView = true
             }
-            .buttonStyle(GradientButtonStyle(scaledAmount: 0.95))
+            .buttonStyle(GradientButtonStyle())
             .popover(isPresented: $showSearchView) {
                 SearchView()
             }

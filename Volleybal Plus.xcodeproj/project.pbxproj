@@ -129,7 +129,6 @@
 			children = (
 				2B8E7B7A295A1C3A003E108F /* Components */,
 				2B1C59FE29538F8D0079BC85 /* SearchView.swift */,
-				2B8E7B642959E9F4003E108F /* TeamSearchCell.swift */,
 				2B8E7B72295A0199003E108F /* FirstLaunchScreen.swift */,
 				2B8E7B74295A1A10003E108F /* HomeView.swift */,
 				2B8E7B76295A1A1F003E108F /* CompetitionView.swift */,
@@ -153,6 +152,7 @@
 		2B8E7B7A295A1C3A003E108F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				2B8E7B642959E9F4003E108F /* TeamSearchCell.swift */,
 				2B8E7B702959F631003E108F /* DownloadingImageView.swift */,
 			);
 			path = Components;

@@ -18,7 +18,7 @@ struct FirstLaunchscreen: View {
             
             Button("Laten we beginnen") {
                 
-            }.buttonStyle(GradientButtonStyle(scaledAmount: 0.95))
+            }.buttonStyle(GradientButtonStyle())
         }
     }
 }

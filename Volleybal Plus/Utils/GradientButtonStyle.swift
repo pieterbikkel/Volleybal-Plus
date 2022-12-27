@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GradientButtonStyle: ButtonStyle {
     
-    let scaledAmount: CGFloat
+    let scaledAmount: CGFloat = 0.95
     
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
@@ -20,5 +20,6 @@ struct GradientButtonStyle: ButtonStyle {
             .cornerRadius(16)
             .scaleEffect(configuration.isPressed ? scaledAmount : 1.0)
             .opacity(configuration.isPressed ? 0.9 : 1.0)
+            .frame(minWidth: 200)
     }
 }

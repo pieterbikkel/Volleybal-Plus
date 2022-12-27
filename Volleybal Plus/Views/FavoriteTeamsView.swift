@@ -12,11 +12,26 @@ struct FavoriteTeamsView: View {
     @StateObject var coreDataViewModel = CoreDataViewModel()
     
     var body: some View {
-        List {
-            ForEach(coreDataViewModel.savedTeams) { team in
-                Text(team.name ?? "")
+        
+        NavigationView {
+            VStack {
+                List {
+                    ForEach(coreDataViewModel.savedTeams) { team in
+                        Text(team.name ?? "")
+                    }.onDelete(perform: coreDataViewModel.deleteTeam)
+                }
+                .toolbar {
+                    EditButton()
+                        .foregroundColor(Color.theme.orange)
+                }
+                .navigationTitle("Favoriete teams")
+                
+                Button("Terug") {
+                    
+                }.buttonStyle(GradientButtonStyle())
             }
         }
+        
     }
 }
 
