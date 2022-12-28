@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21512" systemVersion="22D5027d" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="PouleEntity" representedClassName=".PouleEntity" syncable="YES">
+        <attribute name="poule" optional="YES" attributeType="String"/>
+        <attribute name="poulecode" optional="YES" attributeType="String"/>
+        <attribute name="teamcode" optional="YES" attributeType="String"/>
+        <relationship name="team" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TeamEntity" inverseName="poules" inverseEntity="TeamEntity"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="poulecode"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="TeamEntity" representedClassName=".TeamEntity" syncable="YES">
+        <attribute name="location" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="teamcode" optional="YES" attributeType="String"/>
+        <relationship name="poules" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PouleEntity" inverseName="team" inverseEntity="PouleEntity"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="teamcode"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+</model>

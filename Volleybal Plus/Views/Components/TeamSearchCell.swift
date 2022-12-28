@@ -10,19 +10,20 @@ import SwiftUI
 struct TeamSearchCell: View {
     
     @State private var favorite = false
-    @StateObject var coreDataViewModel = CoreDataViewModel()
+    @StateObject var coreDataViewModel = CDTeamViewModel()
     
-    var image: String?
+    var image: String
     var team: String
     var location: String
-    
-    let defaultImage = "https://static.ah.nl/dam/product/AHI_43545239363738313937?revLabel=1&rendition=LowRes_JPG&fileType=binary"
+    var teamcode: String
     
     var body: some View {
         HStack(spacing: 20) {
-            DownloadingImageView(url: image ?? defaultImage, key: team + location)
+            DownloadingImageView(url: image, key: teamcode)
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 40, height: 40)
+                .cornerRadius(20)
+                .background(Color.white)
             
             VStack(alignment: .leading) {
                 Text(team)
@@ -37,7 +38,10 @@ struct TeamSearchCell: View {
                 if(coreDataViewModel.teamIsFavorite(team: team)) {
                     coreDataViewModel.deleteTeam(team: team)
                 } else {
-                    coreDataViewModel.addTeam(text: team)
+                    Task {
+                        await coreDataViewModel.addTeam(name: team, teamcode: teamcode, location: location)
+                    }
+                    
                 }
                 
             } label: {
@@ -53,6 +57,6 @@ struct TeamSearchCell: View {
 
 struct TeamSearchCell_Previews: PreviewProvider {
     static var previews: some View {
-        TeamSearchCell(image: "photo", team: "Morgana DVO HS 1", location: "Hengelo GLD")
+        TeamSearchCell(image: "photo", team: "Morgana DVO HS 1", location: "Hengelo GLD", teamcode: "ckl8c6m-hs-1")
     }
 }

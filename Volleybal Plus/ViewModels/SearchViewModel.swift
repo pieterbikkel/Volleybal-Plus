@@ -12,6 +12,8 @@ class SearchViewModel: ObservableObject {
     
     @Published var searchQuery: String = ""
     @Published var results: [Team] = []
+    @Published var isSearching = false
+    
     var cancellables = Set<AnyCancellable>()
     var searchCancellables: AnyCancellable? = nil
     
@@ -21,44 +23,32 @@ class SearchViewModel: ObservableObject {
     
     func searchTeams() {
         
-        searchCancellables = $searchQuery
+        $searchQuery
+            .debounce(for: 0.4, scheduler: DispatchQueue.main)
             .removeDuplicates()
-            .debounce(for: 0.4, scheduler: RunLoop.main)
-            .sink(receiveValue: { [weak self] str in
-                if str == "" {
-                    // reset data
-                    self?.results = []
-                } else {
-                    // search data with searchQuery
-                    self?.getResults()
-                }
+            .handleEvents(receiveOutput: { output in
+                self.isSearching = true
             })
-    }
-    
-    private func getResults() {
-        
-        let originalQuery = searchQuery.replacingOccurrences(of: " ", with: "%20")
-        
-        guard let url = URL(string: "https://api.nevobo.nl/v1/zoeken?include=team&q=\(originalQuery)") else { return }
-        
-        URLSession.shared.dataTaskPublisher(for: url)
-            .receive(on: DispatchQueue.main)
-            .tryMap(handleOutput)
-            .decode(type: SearchResult.self, decoder: JSONDecoder())
-            .sink { completion in
-                print("COMPLETION: \(completion)")
-            } receiveValue: { [weak self] returnedResults in
-                self?.results = returnedResults._embedded.items
+            .flatMap { value in
+                Future { promise in
+                    Task {
+                        if (self.searchQuery.count > 4) {
+                            do {
+                                let result = try await Webservice().load(SearchResult.bySearchTeam(self.searchQuery, searchType: "team"))
+                                promise(.success(result._embedded.items))
+                            } catch let error {
+                                print("Error searching: \(error)")
+                            }
+                        }
+                    }
+                }
             }
-            .store(in: &cancellables)
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
+            .handleEvents(receiveOutput: { output in
+                self.isSearching = false
+            })
+            .assign(to: &$results)
     }
     
-    private func handleOutput(output: URLSession.DataTaskPublisher.Output) throws -> Data {
-        guard
-            let response = output.response as? HTTPURLResponse,
-            response.statusCode >= 200 && response.statusCode < 300 else {
-            throw URLError(.badServerResponse)
-        }
-        return output.data
-    }
 }

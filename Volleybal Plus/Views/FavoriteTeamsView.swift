@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FavoriteTeamsView: View {
     
-    @StateObject var coreDataViewModel = CoreDataViewModel()
+    @StateObject var coreDataViewModel = CDTeamViewModel()
     
     var body: some View {
         
@@ -17,7 +17,12 @@ struct FavoriteTeamsView: View {
             VStack {
                 List {
                     ForEach(coreDataViewModel.savedTeams) { team in
-                        Text(team.name ?? "")
+                        VStack(alignment: .leading) {
+                            Text(team.name ?? "No team found")
+                                .font(.headline)
+                            Text(team.location ?? "No location found")
+                                .foregroundColor(Color.theme.gray)
+                        }
                     }.onDelete(perform: coreDataViewModel.deleteTeam)
                 }
                 .toolbar {

@@ -21,7 +21,7 @@ struct SearchView: View {
                 } else {
                     ScrollView {
                         ForEach(vm.results, id: \.naam) { item in
-                            TeamSearchCell(image: item._links.logo_url.href, team: item.naam, location: item.vestigingsplaats)
+                            TeamSearchCell(image: item._links.logo_url.href, team: item.naam, location: item.vestigingsplaats, teamcode: item.code)
                         }
                     }
                 }

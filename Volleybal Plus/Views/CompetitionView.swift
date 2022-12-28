@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct CompetitionView: View {
+    
+    @StateObject var vm = CDTeamViewModel()
+    
     var body: some View {
-        Text("Competitie")
+//        Text("Competitie")
+        List {
+            ForEach(vm.savedTeams) { team in
+                Section(team.poules as? Set<Poules> ?? []) {
+                    
+                }
+            }
+        }
     }
 }
 

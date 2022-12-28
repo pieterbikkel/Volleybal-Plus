@@ -23,7 +23,6 @@ class TeamImagesFileManager {
         if !FileManager.default.fileExists(atPath: url.path) {
             do {
                 try FileManager.default.createDirectory(at: url, withIntermediateDirectories: true, attributes: nil)
-                print("Created Folder")
             } catch let error {
                 print("Error creating folder: \(error.localizedDescription)")
             }

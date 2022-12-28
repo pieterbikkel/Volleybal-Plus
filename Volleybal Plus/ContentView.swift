@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var baseData = BaseViewModel()
+    
     var body: some View {
         TabView {
             HomeView()
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
+                .environmentObject(baseData)
+                
 
             CompetitionView()
                 .tabItem {

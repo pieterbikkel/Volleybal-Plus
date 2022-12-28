@@ -14,6 +14,15 @@
 		2B1C59F929538D990079BC85 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C59F829538D990079BC85 /* SearchResult.swift */; };
 		2B1C59FC29538F7A0079BC85 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C59FB29538F7A0079BC85 /* SearchViewModel.swift */; };
 		2B1C59FF29538F8D0079BC85 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1C59FE29538F8D0079BC85 /* SearchView.swift */; };
+		2B441EB5295B2CFB0075DF4A /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B441EB4295B2CFB0075DF4A /* BaseViewModel.swift */; };
+		2B441EB7295B34610075DF4A /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B441EB6295B34610075DF4A /* ResultViewModel.swift */; };
+		2B441EB9295B359D0075DF4A /* PouleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B441EB8295B359D0075DF4A /* PouleResult.swift */; };
+		2B441EBB295B377F0075DF4A /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B441EBA295B377F0075DF4A /* WebService.swift */; };
+		2B441EBE295B468C0075DF4A /* CDPouleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B441EBD295B468C0075DF4A /* CDPouleViewModel.swift */; };
+		2B441EC3295CA10C0075DF4A /* PouleEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B441EBF295CA10C0075DF4A /* PouleEntity+CoreDataClass.swift */; };
+		2B441EC4295CA10C0075DF4A /* PouleEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B441EC0295CA10C0075DF4A /* PouleEntity+CoreDataProperties.swift */; };
+		2B441EC5295CA10C0075DF4A /* TeamEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B441EC1295CA10C0075DF4A /* TeamEntity+CoreDataClass.swift */; };
+		2B441EC6295CA10C0075DF4A /* TeamEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B441EC2295CA10C0075DF4A /* TeamEntity+CoreDataProperties.swift */; };
 		2B8E7B652959E9F4003E108F /* TeamSearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8E7B642959E9F4003E108F /* TeamSearchCell.swift */; };
 		2B8E7B682959EB55003E108F /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8E7B672959EB55003E108F /* Color.swift */; };
 		2B8E7B6B2959F406003E108F /* ImageLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8E7B6A2959F406003E108F /* ImageLoadingViewModel.swift */; };
@@ -25,8 +34,8 @@
 		2B8E7B77295A1A1F003E108F /* CompetitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8E7B76295A1A1F003E108F /* CompetitionView.swift */; };
 		2B8E7B79295A1A29003E108F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8E7B78295A1A29003E108F /* SettingsView.swift */; };
 		2B8E7B7E295A1D2D003E108F /* GradientButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8E7B7D295A1D2D003E108F /* GradientButtonStyle.swift */; };
-		2BB506F2295A245600E5E4F2 /* CoreDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB506F1295A245600E5E4F2 /* CoreDataViewModel.swift */; };
-		2BB506F6295A24F000E5E4F2 /* TeamsContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BB506F4295A24F000E5E4F2 /* TeamsContainer.xcdatamodeld */; };
+		2BB506F2295A245600E5E4F2 /* CDTeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB506F1295A245600E5E4F2 /* CDTeamViewModel.swift */; };
+		2BB506F6295A24F000E5E4F2 /* VolleybalContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2BB506F4295A24F000E5E4F2 /* VolleybalContainer.xcdatamodeld */; };
 		2BB506F8295A25F600E5E4F2 /* FavoriteTeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB506F7295A25F600E5E4F2 /* FavoriteTeamsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +48,15 @@
 		2B1C59F829538D990079BC85 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		2B1C59FB29538F7A0079BC85 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		2B1C59FE29538F8D0079BC85 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		2B441EB4295B2CFB0075DF4A /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		2B441EB6295B34610075DF4A /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+		2B441EB8295B359D0075DF4A /* PouleResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PouleResult.swift; sourceTree = "<group>"; };
+		2B441EBA295B377F0075DF4A /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		2B441EBD295B468C0075DF4A /* CDPouleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDPouleViewModel.swift; sourceTree = "<group>"; };
+		2B441EBF295CA10C0075DF4A /* PouleEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PouleEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2B441EC0295CA10C0075DF4A /* PouleEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PouleEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2B441EC1295CA10C0075DF4A /* TeamEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TeamEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2B441EC2295CA10C0075DF4A /* TeamEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TeamEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2B8E7B642959E9F4003E108F /* TeamSearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSearchCell.swift; sourceTree = "<group>"; };
 		2B8E7B672959EB55003E108F /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		2B8E7B6A2959F406003E108F /* ImageLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingViewModel.swift; sourceTree = "<group>"; };
@@ -50,7 +68,7 @@
 		2B8E7B76295A1A1F003E108F /* CompetitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionView.swift; sourceTree = "<group>"; };
 		2B8E7B78295A1A29003E108F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		2B8E7B7D295A1D2D003E108F /* GradientButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButtonStyle.swift; sourceTree = "<group>"; };
-		2BB506F1295A245600E5E4F2 /* CoreDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewModel.swift; sourceTree = "<group>"; };
+		2BB506F1295A245600E5E4F2 /* CDTeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDTeamViewModel.swift; sourceTree = "<group>"; };
 		2BB506F5295A24F000E5E4F2 /* TeamsContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TeamsContainer.xcdatamodel; sourceTree = "<group>"; };
 		2BB506F7295A25F600E5E4F2 /* FavoriteTeamsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTeamsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				2B1C59F829538D990079BC85 /* SearchResult.swift */,
+				2B441EB8295B359D0075DF4A /* PouleResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -117,9 +136,11 @@
 		2B1C59FA29538F660079BC85 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				2B441EBC295B464B0075DF4A /* CoreData */,
 				2B1C59FB29538F7A0079BC85 /* SearchViewModel.swift */,
 				2B8E7B6A2959F406003E108F /* ImageLoadingViewModel.swift */,
-				2BB506F1295A245600E5E4F2 /* CoreDataViewModel.swift */,
+				2B441EB4295B2CFB0075DF4A /* BaseViewModel.swift */,
+				2B441EB6295B34610075DF4A /* ResultViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -138,9 +159,19 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		2B441EBC295B464B0075DF4A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2BB506F1295A245600E5E4F2 /* CDTeamViewModel.swift */,
+				2B441EBD295B468C0075DF4A /* CDPouleViewModel.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		2B8E7B662959EB46003E108F /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2B441EBA295B377F0075DF4A /* WebService.swift */,
 				2B8E7B672959EB55003E108F /* Color.swift */,
 				2B8E7B6C2959F465003E108F /* TeamImagesCacheManager.swift */,
 				2B8E7B6E2959F4AC003E108F /* TeamImagesFileManager.swift */,
@@ -161,7 +192,11 @@
 		2BB506F3295A24D500E5E4F2 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				2BB506F4295A24F000E5E4F2 /* TeamsContainer.xcdatamodeld */,
+				2B441EBF295CA10C0075DF4A /* PouleEntity+CoreDataClass.swift */,
+				2B441EC0295CA10C0075DF4A /* PouleEntity+CoreDataProperties.swift */,
+				2B441EC1295CA10C0075DF4A /* TeamEntity+CoreDataClass.swift */,
+				2B441EC2295CA10C0075DF4A /* TeamEntity+CoreDataProperties.swift */,
+				2BB506F4295A24F000E5E4F2 /* VolleybalContainer.xcdatamodeld */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -237,23 +272,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B8E7B79295A1A29003E108F /* SettingsView.swift in Sources */,
+				2B441EBB295B377F0075DF4A /* WebService.swift in Sources */,
+				2B441EB7295B34610075DF4A /* ResultViewModel.swift in Sources */,
+				2B441EC5295CA10C0075DF4A /* TeamEntity+CoreDataClass.swift in Sources */,
+				2B441EB5295B2CFB0075DF4A /* BaseViewModel.swift in Sources */,
+				2B441EC4295CA10C0075DF4A /* PouleEntity+CoreDataProperties.swift in Sources */,
 				2B8E7B652959E9F4003E108F /* TeamSearchCell.swift in Sources */,
 				2B8E7B73295A0199003E108F /* FirstLaunchScreen.swift in Sources */,
 				2BB506F8295A25F600E5E4F2 /* FavoriteTeamsView.swift in Sources */,
+				2B441EC6295CA10C0075DF4A /* TeamEntity+CoreDataProperties.swift in Sources */,
 				2B8E7B75295A1A10003E108F /* HomeView.swift in Sources */,
-				2BB506F2295A245600E5E4F2 /* CoreDataViewModel.swift in Sources */,
+				2BB506F2295A245600E5E4F2 /* CDTeamViewModel.swift in Sources */,
 				2B1C59FF29538F8D0079BC85 /* SearchView.swift in Sources */,
 				2B8E7B682959EB55003E108F /* Color.swift in Sources */,
 				2B8E7B6B2959F406003E108F /* ImageLoadingViewModel.swift in Sources */,
+				2B441EC3295CA10C0075DF4A /* PouleEntity+CoreDataClass.swift in Sources */,
 				2B1C59EC29538D560079BC85 /* ContentView.swift in Sources */,
+				2B441EB9295B359D0075DF4A /* PouleResult.swift in Sources */,
 				2B8E7B712959F631003E108F /* DownloadingImageView.swift in Sources */,
 				2B1C59F929538D990079BC85 /* SearchResult.swift in Sources */,
 				2B1C59FC29538F7A0079BC85 /* SearchViewModel.swift in Sources */,
+				2B441EBE295B468C0075DF4A /* CDPouleViewModel.swift in Sources */,
 				2B1C59EA29538D560079BC85 /* Volleybal_PlusApp.swift in Sources */,
 				2B8E7B6F2959F4AC003E108F /* TeamImagesFileManager.swift in Sources */,
 				2B8E7B77295A1A1F003E108F /* CompetitionView.swift in Sources */,
 				2B8E7B6D2959F465003E108F /* TeamImagesCacheManager.swift in Sources */,
-				2BB506F6295A24F000E5E4F2 /* TeamsContainer.xcdatamodeld in Sources */,
+				2BB506F6295A24F000E5E4F2 /* VolleybalContainer.xcdatamodeld in Sources */,
 				2B8E7B7E295A1D2D003E108F /* GradientButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,13 +501,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2BB506F4295A24F000E5E4F2 /* TeamsContainer.xcdatamodeld */ = {
+		2BB506F4295A24F000E5E4F2 /* VolleybalContainer.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				2BB506F5295A24F000E5E4F2 /* TeamsContainer.xcdatamodel */,
 			);
 			currentVersion = 2BB506F5295A24F000E5E4F2 /* TeamsContainer.xcdatamodel */;
-			path = TeamsContainer.xcdatamodeld;
+			path = VolleybalContainer.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
