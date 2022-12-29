@@ -20,6 +20,10 @@ extension PouleEntity {
     @NSManaged public var teamcode: String?
     @NSManaged public var poule: String?
     @NSManaged public var team: TeamEntity?
+    
+    public var wrappedName: String {
+        poule ?? "Unknown poule"
+    }
 
 }
 

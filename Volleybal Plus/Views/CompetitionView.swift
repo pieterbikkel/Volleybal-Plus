@@ -15,8 +15,10 @@ struct CompetitionView: View {
 //        Text("Competitie")
         List {
             ForEach(vm.savedTeams) { team in
-                Section(team.poules as? Set<Poules> ?? []) {
-                    
+                Section(team.name ?? "No teamname found") {
+                    ForEach(team.poulesArray, id: \.self) { poule in
+                        Text(poule.wrappedName)
+                    }
                 }
             }
         }

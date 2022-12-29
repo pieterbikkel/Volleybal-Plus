@@ -20,6 +20,14 @@ extension TeamEntity {
     @NSManaged public var teamcode: String?
     @NSManaged public var location: String?
     @NSManaged public var poules: NSSet?
+    
+    public var poulesArray: [PouleEntity] {
+        let set = poules as? Set<PouleEntity> ?? []
+        
+        return set.sorted {
+            $0.wrappedName < $1.wrappedName
+        }
+    }
 
 }
 

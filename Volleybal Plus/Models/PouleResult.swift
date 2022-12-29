@@ -12,10 +12,10 @@ struct PouleResult: Codable {
 }
 
 struct PouleItems: Codable {
-    let items: [Poules]
+    let items: [Poule]
 }
 
-struct Poules: Codable {
+struct Poule: Codable {
     let promotie_hoogste: Int?
     let promotie_laagste: Int?
     let promotiewedstrijden_hoogste: Int?
